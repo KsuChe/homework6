@@ -1,6 +1,12 @@
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello world!");
+int []arr = generateRandomArray();
+        for (int j : arr) {
+            System.out.println(j);
+
+        }
+
 //task1
         int[] money = generateRandomArray();
         int sum = 0;
@@ -8,6 +14,23 @@ public class Main {
             sum +=generateRandomArray()[index];
         }
         System.out.println("Сумма трат за месяц составила " + sum + " рублей");
+        System.out.println();
+
+        //task 2
+        int maxSpending = 90000;
+        for (int i = 0; i < money.length; i++) {
+            if (money[i]>maxSpending) {
+                maxSpending = money[i];
+            }
+        }
+        System.out.println(maxSpending);
+        int minSpending = 300000;
+        for (int i = 0; i < money.length; i++) {
+            if (money[i]<minSpending) {
+                minSpending = money[i];
+            }
+        }
+        System.out.println(minSpending);
     }
 
 
