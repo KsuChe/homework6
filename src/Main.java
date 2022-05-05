@@ -10,27 +10,40 @@ int []arr = generateRandomArray();
 //task1
         int[] money = generateRandomArray();
         int sum = 0;
-        for (int index = 0; index < money.length; index++) {
-            sum +=generateRandomArray()[index];
+        for (int j = 0; j < money.length; j++) {
+            sum +=generateRandomArray()[j];
         }
         System.out.println("Сумма трат за месяц составила " + sum + " рублей");
         System.out.println();
 
         //task 2
         int maxSpending = 90000;
-        for (int i = 0; i < money.length; i++) {
-            if (money[i]>maxSpending) {
-                maxSpending = money[i];
+        for (int j : money) {
+            if (j > maxSpending) {
+                maxSpending = j;
             }
         }
         System.out.println(maxSpending);
         int minSpending = 300000;
-        for (int i = 0; i < money.length; i++) {
-            if (money[i]<minSpending) {
-                minSpending = money[i];
+        for (int j : money) {
+            if (j < minSpending) {
+                minSpending = j;
             }
         }
         System.out.println(minSpending);
+        System.out.println();
+
+        //task3
+        double average = 0;
+        if (money.length>0) {
+            double Sum = 0;
+            for (int j = 0; j < money.length; j++) {
+                sum += generateRandomArray()[j];
+            }
+            average = sum / money.length;
+        }
+        System.out.println("Средняя сумма трат за месяц составила " + average + " рублей");
+        System.out.println();
     }
 
 
